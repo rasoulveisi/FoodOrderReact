@@ -1,5 +1,5 @@
-import classes from "./MealsAvailable.module.css";
 import Card from "../UI/Card";
+import classes from "./MealsAvailable.module.css";
 import MealItems from "./MealItems/MealItems";
 
 const DUMMY_MEALS = [
@@ -31,16 +31,13 @@ const DUMMY_MEALS = [
 
 const MealsAvailable = () => {
   const mealsList = DUMMY_MEALS.map((meal) => (
-    <li>
-      {
-        <MealItems
-          key={meal.id}
-          name={meal.name}
-          description={meal.description}
-          price={meal.price}
-        />
-      }
-    </li>
+    <MealItems
+      key={meal.id}
+      id={meal.id}
+      name={meal.name}
+      description={meal.description}
+      price={meal.price}
+    />
   ));
 
   return (
