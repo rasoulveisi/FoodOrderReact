@@ -1,12 +1,12 @@
 import classes from "./Header.module.css";
 import headerImage from "../../assets/meals.jpg";
 import HeaderButton from "./HeaderButton";
-const Header = () => {
+const Header = (props) => {
   return (
     <>
       <header className={classes.header}>
         <h1>MealsCart</h1>
-        <HeaderButton />
+        <HeaderButton onClick={props.onShowCart} />
       </header>
       <div className={classes["main-image"]}>
         <img src={headerImage} />
