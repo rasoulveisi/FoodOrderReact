@@ -1,12 +1,12 @@
 import { useContext } from "react";
 
-import MealItemsForm from "./MealItemsForm";
-import classes from "./MealItems.module.css";
+import ProductsItemsForm from "./ProductsItemsForm";
+import classes from "./ProductsItems.module.css";
 import CartContex from "../../../store/cart-contex";
 
-const MealItems = (props) => {
+const ProductsItems = (props) => {
   const cartContex = useContext(CartContex);
-  const price = `$${props.price.toFixed(2)}`;
+  const price = `$ ${props.price.toFixed(2)}`;
 
   const addToCartHandler = (amount) => {
     cartContex.addItem({
@@ -17,17 +17,17 @@ const MealItems = (props) => {
     });
   };
   return (
-    <li className={classes.meal}>
+    <li className={classes.products}>
       <div>
         <h3>{props.name}</h3>
         <div className={classes.description}>{props.description}</div>
         <div className={classes.price}>{price}</div>
       </div>
       <div>
-        <MealItemsForm id={props.id} onAddToCart={addToCartHandler} />
+        <ProductsItemsForm id={props.id} onAddToCart={addToCartHandler} />
       </div>
     </li>
   );
 };
 
-export default MealItems;
+export default ProductsItems;
