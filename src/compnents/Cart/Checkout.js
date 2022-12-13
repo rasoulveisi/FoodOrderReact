@@ -40,21 +40,31 @@ const Checkout = (props) => {
     console.log(submitedName, submitedAddress, submitedPostalCode);
   };
 
+  const nameControlClasses = `${classes.control} ${
+    formValidation.name ? "" : classes.invalid
+  }`;
+  const addressControlClasses = `${classes.control} ${
+    formValidation.address ? "" : classes.invalid
+  }`;
+  const postalCodeControlClasses = `${classes.control} ${
+    formValidation.postalCode ? "" : classes.invalid
+  }`;
+
   return (
     <form className={classes.form} onSubmit={confirmHandler}>
-      <div className={classes.control}>
+      <div className={nameControlClasses}>
         <label htmlFor="name">Your Name</label>
         <input type="text" id="name" ref={nameRef} />
         {!formValidation.name && <p>Please enter a valid name!</p>}
       </div>
 
-      <div className={classes.control}>
+      <div className={addressControlClasses}>
         <label htmlFor="address">Address</label>
         <input type="text" id="address" ref={addressRef} />
         {!formValidation.address && <p>Please enter a valid address!</p>}
       </div>
 
-      <div className={classes.control}>
+      <div className={postalCodeControlClasses}>
         <label htmlFor="postal">Postal Code</label>
         <input type="number" id="postal" ref={postalCodeRef} />
         {!formValidation.postalCode && <p>Please enter a valid postal code!</p>}
