@@ -3,15 +3,10 @@ import classes from "./ProductsSummary.module.css";
 const ProductsSummary = () => {
   return (
     <section className={classes.summary}>
-      <h2>Lorem, ipsum dolor.</h2>
+      <h2>Buy technology!</h2>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero voluptate
-        laudantium, alias accusantium nobis quos odio, cumque temporibus debitis
-        explicabo et inventore nostrum quod neque, voluptatum perspiciatis amet
-        consequatur. Inventore.{" "}
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, tempore?{" "}
+        All of our tech products will one day become obsolete, but here are some
+        strategies to buying gadgets that you can enjoy for many years.
       </p>
     </section>
   );

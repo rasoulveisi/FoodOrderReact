@@ -37,7 +37,15 @@ const Checkout = (props) => {
 
     if (!formIsValid) return;
 
-    console.log(submitedName, submitedAddress, submitedPostalCode);
+    props.onConfirm({
+      name: submitedName,
+      address: submitedAddress,
+      postalCode: submitedPostalCode,
+    });
+
+    nameRef.current.value = "";
+    addressRef.current.value = "";
+    postalCodeRef.current.value = "";
   };
 
   const nameControlClasses = `${classes.control} ${

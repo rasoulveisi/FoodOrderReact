@@ -25,6 +25,12 @@ const Cart = (props) => {
     setShowOrder(true);
   };
 
+  const dataSubmitHandler = (userData) => {
+    console.log(userData);
+
+    cartCtx.clearCart();
+  };
+
   const cartItems = (
     <ul className={classes["cart-items"]}>
       {cartCtx.items.map((item) => (
@@ -55,13 +61,15 @@ const Cart = (props) => {
 
   return (
     <Modal onClick={props.onHideCart}>
-      {cartItems}
+      {!showOrder && cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
 
-      {showOrder && <Checkout onCancel={props.onHideCart} />}
+      {showOrder && (
+        <Checkout onCancel={props.onHideCart} onConfirm={dataSubmitHandler} />
+      )}
 
       {!showOrder && modalAction}
     </Modal>

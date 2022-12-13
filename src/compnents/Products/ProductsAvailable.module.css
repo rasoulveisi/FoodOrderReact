@@ -2,7 +2,7 @@
   max-width: 60rem;
   width: 90%;
   margin: 2rem auto;
-  animation: meals-appear 1s ease-out forwards;
+  animation: products-appear 1s ease-out forwards;
 }
 
 .products ul {
@@ -24,12 +24,9 @@
 }
 
 .loading {
-  /* width: 50%; */
   text-align: center;
   color: white;
   padding: 1rem;
-
-  /* background-color: black; */
 }
 
 .error {
