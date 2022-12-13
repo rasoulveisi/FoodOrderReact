@@ -22,3 +22,18 @@
     transform: translateY(0);
   }
 }
+
+.loading {
+  /* width: 50%; */
+  text-align: center;
+  color: white;
+  padding: 1rem;
+
+  /* background-color: black; */
+}
+
+.error {
+  font-weight: bold;
+  text-align: center;
+  color: red;
+}
